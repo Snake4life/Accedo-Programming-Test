@@ -1,3 +1,5 @@
+var fakeAPI = require("../api.json")
+
 exports.getMovieList = function *(next) {
-	this.body = "helloworld"
+	this.body = fakeAPI
 }

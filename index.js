@@ -11,7 +11,7 @@ var koa = require("koa")
     ;
 
 // Initialize database
-connection = mongoose.connect("mongodb://127.0.0.1:27017/basic-VOD")
+connection = mongoose.connect("mongodb://127.0.0.1:27017/basicvod")
 mongoose.set("debug",  env == "production"? false: true)
 
 // Initialize models after database
