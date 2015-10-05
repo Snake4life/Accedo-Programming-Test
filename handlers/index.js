@@ -3,5 +3,5 @@ exports.movie = require("./movie")
 exports.viewingSession = require("./viewingsession")
 
 exports.indexHandler = function *(next) {
-	this.body = "Welcome to the basic VOD"
+	yield this.render("player")
 }

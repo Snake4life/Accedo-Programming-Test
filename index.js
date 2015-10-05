@@ -3,6 +3,7 @@ var koa = require("koa")
     , logger = require("koa-logger")
     , router = require("koa-router")
     , render = require("koa-swig")
+    , serve = require("koa-static")
     , http = require("http")
     , path = require("path")
     , mongoose = require("mongoose")
@@ -18,6 +19,7 @@ mongoose.set("debug",  env == "production"? false: true)
 var models = require("./models")
 
 app.use(logger())
+app.use(serve("./dist"))
 
 // Swig (Template rendering engine)
 app.context.render = render({
