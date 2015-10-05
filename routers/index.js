@@ -8,4 +8,5 @@ public
 	.get("/", handlers.indexHandler)
 
 api
+	.use(handlers.viewingSession)
 	.get("/api/v1/movies", handlers.movies.getMovieList)
