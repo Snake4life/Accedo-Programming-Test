@@ -9,4 +9,9 @@ public
 
 api
 	.use(handlers.viewingSession)
+	.param("movieid", handlers.movie.load)
+
 	.get("/api/v1/movies", handlers.movies.getMovieList)
+	.get("/api/v1/movies/viewed", handlers.movies.getViewedMovieList)
+
+	.post("/api/v1/movie/:movieid", handlers.movie.addViewHistory)

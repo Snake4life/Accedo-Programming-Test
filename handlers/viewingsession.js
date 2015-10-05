@@ -4,7 +4,7 @@ var uuid = require("node-uuid")
 module.exports = function *(next) {
 	var sessionId = this.cookies.get("sessionid")
 
-	var viewingSession = yield ViewingSession.findOne({
+	var viewingSession = this.viewingSession = yield ViewingSession.findOne({
 		sessionId: sessionId
 	}).exec()
 
