@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+	watch = require('gulp-watch'),
     jshint = require('gulp-jshint'),
     webpack = require('gulp-webpack'),
     uglify = require('gulp-uglify'),
@@ -21,4 +22,5 @@ gulp.task('webpack', function () {
 
 gulp.task('default', function(){
     gulp.run('lint', 'webpack')
+    gulp.watch(["src/**/*.js"], {interval: 1000}, ["lint", "webpack"])
 })
