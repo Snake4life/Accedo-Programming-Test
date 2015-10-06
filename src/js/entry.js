@@ -12,6 +12,7 @@ movies.on("reset", function(){
 	// reset whole container
 	$container.empty()
 
+	// re-render all views like React
 	for (i in models){
 		var view = new views.CarouselSlideView({
 			model: models[i],
@@ -22,8 +23,32 @@ movies.on("reset", function(){
 	}
 
 	$('.carousel').carousel({
-		interval: 100000
+		interval: 1000,
+		keyboard: true
 	})
 })
 
+viewingSession.on("change", function(model){
+	var $container = $(".list-group")
+
+	var videosViewed = model.get("videosViewed")
+	// var videosViewed = ["10-things-i-hate-about-you"]
+	var mov = movies.filter(function(model){
+		return _.contains(videosViewed, model.get("id"))
+	})
+
+	$container.empty()
+
+	// re-render the list view
+	for (i in mov){
+		var view = new views.ListItemView({
+			model: mov[i],
+			el: $container
+		})
+
+		view.render()
+	}
+})
+
 movies.reset(movieEntries)
+viewingSession.set("videosViewed", videosViewed)
