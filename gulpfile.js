@@ -30,5 +30,5 @@ gulp.task('webpack', function () {
 
 gulp.task('default', function(){
     gulp.run('lint', 'webpack', 'less')
-    gulp.watch(["src/**/*.js"], {interval: 1000}, ["lint", "webpack", "less"])
+    gulp.watch(["src/**/*.js", "src/**/*.less"], {interval: 1000}, ["lint", "webpack", "less"])
 })

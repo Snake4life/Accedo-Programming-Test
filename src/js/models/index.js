@@ -5,7 +5,3 @@ exports.ViewingSession = Backbone.Model.extend({
 		this.videosViewed = response.videosViewed
 	}
 })
-
-// exports.Movie = Backbone.Model.extend({
-
-// })
