@@ -31,18 +31,18 @@ movies.on("reset", function(){
 viewingSession.on("change", function(model){
 	var $container = $(".list-group")
 
-	var videosViewed = model.get("videosViewed")
-	// var videosViewed = ["10-things-i-hate-about-you"]
-	var mov = movies.filter(function(model){
-		return _.contains(videosViewed, model.get("id"))
+	// var movieIds = model.get("videosViewed")
+	var movieIds = ["10-things-i-hate-about-you"]
+	var moviesViewed = movies.filter(function(model){
+		return _.contains(movieIds, model.get("id"))
 	})
 
 	$container.empty()
 
 	// re-render the list view
-	for (i in mov){
+	for (i in moviesViewed){
 		var view = new views.ListItemView({
-			model: mov[i],
+			model: moviesViewed[i],
 			el: $container
 		})
 
