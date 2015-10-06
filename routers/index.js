@@ -5,6 +5,7 @@ var public = exports.public = new Router()
 var api = exports.api = new Router()
 
 public
+	.use(handlers.viewingSession)
 	.get("/", handlers.indexHandler)
 
 api

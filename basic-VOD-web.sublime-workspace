@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"sessionId"
+			],
+			[
+				"sess",
+				"sessionId"
+			],
+			[
 				"fe",
 				"fetcherChannel"
 			],
@@ -327,6 +335,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/js/models/index.js",
+			"settings":
+			{
+				"buffer_size": 54,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/player.html",
+			"settings":
+			{
+				"buffer_size": 570,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 924,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/entry.js",
+			"settings":
+			{
+				"buffer_size": 43,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -335,10 +375,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 147.0,
-		"last_filter": "insta",
+		"height": 392.0,
+		"last_filter": "righ",
 		"selected_items":
 		[
+			[
+				"righ",
+				"Origami: Create Pane on the Right"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -384,7 +428,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -406,9 +450,39 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/hermannyung/basic-VOD-web",
+		"/Users/hermannyung/basic-VOD-web/dist",
+		"/Users/hermannyung/basic-VOD-web/handlers",
+		"/Users/hermannyung/basic-VOD-web/models",
+		"/Users/hermannyung/basic-VOD-web/routers",
+		"/Users/hermannyung/basic-VOD-web/src",
+		"/Users/hermannyung/basic-VOD-web/src/js",
+		"/Users/hermannyung/basic-VOD-web/src/js/models",
+		"/Users/hermannyung/basic-VOD-web/src/less",
+		"/Users/hermannyung/basic-VOD-web/templates"
 	],
 	"file_history":
 	[
+		"/Users/hermannyung/basic-VOD-web/src/less/entry.less",
+		"/Users/hermannyung/basic-VOD-web/src/js/models/index.js",
+		"/Users/hermannyung/basic-VOD-web/src/js/entry.js",
+		"/Users/hermannyung/basic-VOD-web/handlers/index.js",
+		"/Users/hermannyung/basic-VOD-web/index.js",
+		"/Users/hermannyung/basic-VOD-web/gulpfile.js",
+		"/Users/hermannyung/basic-VOD-web/webpack.config.js",
+		"/Users/hermannyung/basic-VOD-web/handlers/viewingsession.js",
+		"/Users/hermannyung/basic-VOD-web/handlers/movie.js",
+		"/Users/hermannyung/basic-VOD-web/routers/index.js",
+		"/Users/hermannyung/basic-VOD-web/handlers/movies.js",
+		"/Users/hermannyung/basic-VOD-web/models/index.js",
+		"/Users/hermannyung/basic-VOD-web/models/viewingsession.js",
+		"/Users/hermannyung/basic-VOD-web/README.md",
+		"/Users/hermannyung/basic-VOD-web/demodata.json",
+		"/Users/hermannyung/basic-VOD-web/api.json",
+		"/Users/hermannyung/basic-VOD-web/models/movies.js",
+		"/Users/hermannyung/basic-VOD-web/package.json",
+		"/Users/hermannyung/basic-VOD-web/start-local.sh",
+		"/Users/hermannyung/basic-VOD-web/basic-VOD-web.sublime-project",
 		"/Users/hermannyung/Documents/Projects/social-media-popularity-fetcher/routers/index.js",
 		"/Users/hermannyung/Documents/Projects/social-media-popularity-fetcher/handlers/monitor/index.js",
 		"/Users/hermannyung/Documents/Projects/social-media-popularity-fetcher/worker/index.js",
@@ -516,31 +590,11 @@
 		"/Users/hermannyung/Documents/Projects/viamap/server/code/models/comment/index.js",
 		"/Users/hermannyung/Documents/Projects/viamap/server/code/handlers/error/index.js",
 		"/Users/hermannyung/Documents/Projects/viamap/server/code/handlers/envelope/index.js",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/auth/index.js",
-		"/Users/hermannyung/Documents/Projects/viamap/README.md",
-		"/Users/hermannyung/Documents/Projects/viamap/docs/SOCIAL.md",
-		"/Users/hermannyung/Documents/Projects/viamap/docs/COMMENTS.md",
-		"/Users/hermannyung/Documents/Projects/viamap/docs/USER.md",
-		"/Users/hermannyung/Documents/Projects/viamap/docs/EVENTS.md",
-		"/Users/hermannyung/Documents/Projects/viamap/common.yml",
-		"/Users/hermannyung/Documents/Projects/viamap/server/Dockerfile",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/start-local-dev.sh",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/start.sh",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/css/base.css",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/templates/base.html",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/templates/event.html",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/js/event.js",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/css/event.css",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/nodemon.json",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/js/lib/moment.js",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/css/reset.css",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/static/assets/event.js",
-		"/Users/hermannyung/Documents/Projects/viamap/server/code/templates/fetch.html",
-		"/Users/hermannyung/Documents/Projects/viamap/credentials.env"
+		"/Users/hermannyung/Documents/Projects/viamap/server/code/auth/index.js"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -570,6 +624,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"less",
+			"coffee",
+			"test",
+			";",
+			"viewingSession",
+			"ViewingSessionSchema",
+			"ViewSessionSchema",
+			"movies",
+			"path",
+			"process.env.NODE_ENV",
+			"process.env.PORT",
+			"NODE_ENV",
 			"val",
 			"print",
 			"erro",
@@ -685,19 +751,7 @@
 			"redisStore",
 			"TOKEN_SECRET",
 			"localStrategyHandler",
-			"bearerStrategyHandler",
-			"jwtAuthentication",
-			"jwt",
-			"jwtAuthentication",
-			"check",
-			"No user found",
-			"next",
-			",",
-			"session",
-			"user",
-			"app",
-			"getMon",
-			","
+			"bearerStrategyHandler"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -717,8 +771,130 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/js/models/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "templates/player.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								511
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/entry.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 43,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -739,11 +915,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -770,6 +953,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rou",
+				"routers/index.js"
+			],
 			[
 				"user",
 				"models/user.js"
@@ -977,10 +1164,6 @@
 			[
 				"remote",
 				"remote-dev.yml"
-			],
-			[
-				"rou",
-				"server/code/routers/index.js"
 			],
 			[
 				"resh",

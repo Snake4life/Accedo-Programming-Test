@@ -1,9 +1,12 @@
 var fakeAPI = require("../api.json")
 
 exports.getMovieList = function *(next) {
-	this.body = fakeAPI
+	this.body = fakeAPI.entries
 }
 
 exports.getViewedMovieList = function *(next) {
-	this.body = this.viewingSession.videosViewed
+	this.body = {
+		sessionId: this.viewingSession.sessionId,
+		videosViewed: this.viewingSession.videosViewed
+	}
 }
