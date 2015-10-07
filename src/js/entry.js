@@ -27,3 +27,4 @@ globalEvents.on("itemwatch", function(e, title){
 // initialize
 movies.reset(movieEntries)
 viewingSession.set("videosViewed", viewedMovieEntries)
+

@@ -19,7 +19,10 @@ module.exports = Backbone.View.extend({
 		var $image = $("<img>").attr("src", src)
 		var $caption = $("<div>").addClass("carousel-caption").html(caption)
 
-		this.$video = $("<video>").attr("src", this.model.get("contents")[0].url)
+		this.$video = $("<video>").attr({
+			src: this.model.get("contents")[0].url,
+			preload: "none"
+		})
 
 		this.$el
 			.append($image)
