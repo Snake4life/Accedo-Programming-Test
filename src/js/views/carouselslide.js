@@ -1,8 +1,10 @@
+var globalEvents = require("../global-events")
+
 module.exports = Backbone.View.extend({
 	className: "item",
 	events: {
 		"click img": function(){
-			console.log(this.model.get("title"))
+			globalEvents.trigger("itemwatch", this.model.get("id"))
 		}
 	},
 	initialize: function(options){
