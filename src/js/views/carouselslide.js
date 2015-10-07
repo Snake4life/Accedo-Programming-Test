@@ -5,6 +5,8 @@ module.exports = Backbone.View.extend({
 	events: {
 		"click img": function(){
 			globalEvents.trigger("itemwatch", this.model.get("id"))
+			this.$video[0].webkitRequestFullscreen()
+			this.$video[0].play()
 		}
 	},
 	initialize: function(options){
@@ -17,9 +19,12 @@ module.exports = Backbone.View.extend({
 		var $image = $("<img>").attr("src", src)
 		var $caption = $("<div>").addClass("carousel-caption").html(caption)
 
+		this.$video = $("<video>").attr("src", this.model.get("contents")[0].url)
+
 		this.$el
 			.append($image)
 			.append($caption)
+			.append(this.$video.hide())
 
 		if(this.options.i == 0) {
 			this.$el.addClass("active")
