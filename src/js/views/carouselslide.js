@@ -7,6 +7,16 @@ module.exports = Backbone.View.extend({
 			globalEvents.trigger("itemwatch", this.model.get("id"))
 			this.$video[0].webkitRequestFullscreen()
 			this.$video[0].play()
+
+			var self = this
+
+			$(document).one("webkitfullscreenchange", function(){
+				$(document).one("webkitfullscreenchange", function(){
+					if(!document.webkitFullscreenElement){
+						self.$video[0].pause()
+					}
+				})
+			})
 		}
 	},
 	initialize: function(options){
