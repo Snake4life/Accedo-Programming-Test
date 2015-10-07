@@ -17,7 +17,7 @@ module.exports = Backbone.View.extend({
 		for(var i in this.collection.models){
 			var view = new CarouselSlideView({
 				model: this.collection.models[i],
-				first: i == 0
+				i: i
 			})
 
 			this.subviews.push(view)
@@ -25,8 +25,9 @@ module.exports = Backbone.View.extend({
 		}
 
 		this.$el.parent().carousel({
-			interval: 1000,
-			keyboard: true
+			interval: 10000,
+			keyboard: true,
+			pause: false
 		})
 	}
 })

@@ -21,7 +21,7 @@ module.exports = Backbone.View.extend({
 			.append($image)
 			.append($caption)
 
-		if(this.options.first) {
+		if(this.options.i == 0) {
 			this.$el.addClass("active")
 		}
 
