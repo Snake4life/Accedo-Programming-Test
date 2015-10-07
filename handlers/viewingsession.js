@@ -1,5 +1,7 @@
 var ViewingSession = require("mongoose").model("ViewingSession")
 var uuid = require("node-uuid")
+var fakeAPI = require("../api.json")
+var _ = require("lodash")
 
 module.exports = function *(next) {
 	var sessionId = this.cookies.get("sessionid")
@@ -14,6 +16,15 @@ module.exports = function *(next) {
 		this.viewingSession = yield viewingSession.save()
 		this.cookies.set("sessionid", sessionId)
 	}
+
+
+	// In real life we should store and populate
+	// the movie entries
+	// var self = this
+
+	// this.viewingSession.viewedEntries = fakeAPI.entries.filter(function(entry){
+	// 	return _.contains(self.viewingSession.videosViewed, entry.id)
+	// })
 
 	yield next
 }

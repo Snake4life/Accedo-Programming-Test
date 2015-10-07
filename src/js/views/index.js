@@ -1,2 +1,3 @@
+exports.CarouselView = require("./carousel")
 exports.CarouselSlideView = require("./carouselslide")
-exports.ListItemView = require("./listitem")
+exports.ListView = require("./list")

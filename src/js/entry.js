@@ -5,50 +5,17 @@ var views = require("./views")
 var movies = new collections.Movies()
 var viewingSession = new models.ViewingSession()
 
-movies.on("reset", function(){
-	var $container = $(".carousel-inner")
-	var models = movies.models
+var movieCarouselView = new views.CarouselView({collection: movies, el: $(".carousel-inner")})
+var viewedMovieListView = new views.ListView({model: viewingSession, el: $(".list-group")})
 
-	// reset whole container
-	$container.empty()
-
-	// re-render all views like React
-	for (i in models){
-		var view = new views.CarouselSlideView({
-			model: models[i],
-			el: $container,
-			first: i == 0
-		})
-		view.render()
-	}
-
-	$('.carousel').carousel({
-		interval: 1000,
-		keyboard: true
-	})
-})
-
-viewingSession.on("change", function(model){
-	var $container = $(".list-group")
-
-	// var movieIds = model.get("videosViewed")
-	var movieIds = ["10-things-i-hate-about-you"]
-	var moviesViewed = movies.filter(function(model){
-		return _.contains(movieIds, model.get("id"))
+viewingSession.on("change", function(){
+	var moviesViewed = movies.models.filter(function(entry){
+		return _.contains(viewingSession.get("videosViewed"), entry.id)
 	})
 
-	$container.empty()
-
-	// re-render the list view
-	for (i in moviesViewed){
-		var view = new views.ListItemView({
-			model: moviesViewed[i],
-			el: $container
-		})
-
-		view.render()
-	}
+	viewedMovieListView.render(moviesViewed)
 })
 
+// initialize
 movies.reset(movieEntries)
-viewingSession.set("videosViewed", videosViewed)
+viewingSession.set("videosViewed", viewedMovieEntries)
