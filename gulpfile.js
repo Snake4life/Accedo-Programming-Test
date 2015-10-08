@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     webpack = require('gulp-webpack'),
     uglify = require('gulp-uglify'),
+    shell = require('gulp-shell'),
     rename = require('gulp-rename');
 
 gulp.task('lint', function  () {
@@ -28,7 +29,11 @@ gulp.task('webpack', function () {
         .pipe(gulp.dest('./dist/js'))
 })
 
+gulp.task('cmdline', shell.task([
+  'npm install --verbose && nodemon -e js,html,css --debug --harmony index.js'
+]))
+
 gulp.task('default', function(){
-    gulp.run('lint', 'webpack', 'less')
+    gulp.run('lint', 'webpack', 'less', "cmdline")
     gulp.watch(["src/**/*.js", "src/**/*.less"], {interval: 1000}, ["lint", "webpack", "less"])
 })
